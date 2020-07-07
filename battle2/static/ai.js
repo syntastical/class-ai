@@ -12,7 +12,15 @@
             name: "",
             hitpoints: 123,
             maxHitpoints: 234,
-            attack(enemy)
+            items: [
+                {
+                    name: "revive"
+                    description: "Revives a fallen ally."
+                }
+            ]
+            attack(enemy),
+            heal(ally),
+            useItem(item)
         }
     ]
 }

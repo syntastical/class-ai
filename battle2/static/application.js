@@ -1,17 +1,19 @@
 class Character {
-    constructor(name, currentHitpoints, maxHitpoints, alignment, sprite) {
+    constructor(name, hitpoints, magicpoints, alignment, sprite) {
         this._name = name;
-        this._currentHitpoints = currentHitpoints;
-        this._maxHitpoints = maxHitpoints;
+        this.currentHitpoints = hitpoints;
+        this._maxHitpoints = hitpoints;
+        this.currentMagicpoints = magicpoints
+        this._maxMagicpoints = magicpoints;
         this._alignment = alignment;
         this._sprite = sprite
     }
 
     attack(character) {
-        if(this._currentHitpoints === 0) {
+        if(this.currentHitpoints === 0) {
             addText(`${this._name} was commanded to attack but is already dead!`);
         }
-        // let character = (this._alignment === 'enemy' ? gameState.allies : gameState.enemies).filter(character => character.name === name)[0];
+
         if(character.currentHitpoints === 0) {
             addText(`${character.name} has already been defeated, no effect!`);
             return;
@@ -20,8 +22,7 @@ class Character {
         let damage = (character.currentHitpoints < 3 ? character.currentHitpoints : 3);
         character.currentHitpoints -= damage;
         addText(`${this.name} attacked ${character.name} for ${damage} damage`);
-        let hpUi = document.getElementById(`${character.name}-hp`);
-        hpUi.innerText = ` (${character.currentHitpoints}:${character.maxHitpoints})`
+        
 
         if(character.currentHitpoints === 0) {
             addText(`${character.name} has been slain!`);
@@ -36,13 +37,27 @@ class Character {
         this._currentHitpoints = hitpoints;
     }
 
+
+    get maxHitpoints() {
+        return this._currentHitpoints;
+    }
+
+    get currentMagicpoints() {
+        return this._currentMagicpoints;
+    }
+
+    set currentMagicpoints(magicpoints) {
+        this._currentMagicpoints = magicpoints;
+    }
+
+    get maxMagicpoints() {
+        return this._maxMagicpoints;
+    }
+
     get name() {
         return this._name;
     }
 
-    get maxHitpoints() {
-        return this._maxHitpoints;
-    }
 
     get alignment() {
         return this._alignment;
@@ -60,14 +75,14 @@ let battleLog = document.getElementById('battle-log');
 let gameOver = false;
 let gameState = {
     enemies: [
-        new Character("blobby", 100, 100, "enemy", "images/blue.png"),
-        new Character("blobbita", 100, 100, "enemy", "images/blue.png"),
-        new Character("blobbert", 100, 100, "enemy", "images/blue.png")
+        new Character("blobby", 100, 0, "enemy", "images/blue.png"),
+        new Character("blobbita", 100, 0, "enemy", "images/blue.png"),
+        new Character("blobbert", 100, 50, "enemy", "images/purple.png")
     ],
     allies: [
-        new Character("dooood", 100, 100, "ally", "images/blue.png"),
-        new Character("doodle", 100, 100, "ally", "images/blue.png"),
-        new Character("steve", 100, 100, "ally", "images/blue.png")
+        new Character("dooood", 100, 0, "ally", "images/blue.png"),
+        new Character("doodle", 100, 0, "ally", "images/blue.png"),
+        new Character("steve", 100, 50, "ally", "images/purple.png")
     ]
 }
 
@@ -132,7 +147,7 @@ function createCharacter(character) {
     
     let hitpoints = document.createElement('span');
     hitpoints.setAttribute('id', `${character.name}-hp`)
-    hitpoints.textContent = ` (${character.currentHitpoints}:${character.maxHitpoints})`
+    hitpoints.textContent = ` HP(${character.currentHitpoints}:${character.maxHitpoints})`
     name.appendChild(hitpoints)
     container.appendChild(name);
 
