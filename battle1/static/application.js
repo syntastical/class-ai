@@ -60,15 +60,23 @@ let battleLog = document.getElementById('battle-log');
 let gameOver = false;
 let gameState = {
     enemies: [
-        new Character("blobby", 100, 100, "enemy", "images/blue.png"),
-        new Character("blobbita", 100, 100, "enemy", "images/blue.png"),
-        new Character("blobbert", 100, 100, "enemy", "images/blue.png")
+        new Character("blobby", 150, 150, "enemy", getImage()),
+        new Character("blobbita", 100, 100, "enemy", getImage()),
+        new Character("blobbert", 50, 50, "enemy", getImage())
     ],
     allies: [
-        new Character("dooood", 100, 100, "ally", "images/blue.png"),
-        new Character("doodle", 100, 100, "ally", "images/blue.png"),
-        new Character("steve", 100, 100, "ally", "images/blue.png")
+        new Character("dooood", 100, 100, "ally", getImage()),
+        new Character("doodle", 100, 100, "ally", getImage()),
+        new Character("steve", 100, 100, "ally", getImage())
     ]
+}
+
+function getImage() {
+    return [
+        "images/purple.png",
+        "images/red.png",
+        "images/blue.png"
+    ][Math.floor(Math.random() * 3)];
 }
 
 init();

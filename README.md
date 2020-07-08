@@ -54,8 +54,12 @@ $ npm run test:cov
    3. alpha/beta pruning (https://en.wikipedia.org/wiki/Alpha%E2%80%93beta_pruning)
 5. Start working on battle1 project
 
-<!-- ## Day 3
-https://flappybird.io/ 
+## Day 3
+1. https://flappybird.io/
+2. Attempt to finish work on battle1
+
+
+<!--
 frameworks, tensor flow
 https://www.tensorflow.org/js/demos-->
 
