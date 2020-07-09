@@ -59,8 +59,9 @@ $ npm run test:cov
 2. Attempt to finish work on battle1
 
 ## Day 4
-1. Start work on battle2
-2. https://www.tensorflow.org/js/demos
+1. http://www.gameaipro.com/GameAIPro/GameAIPro_Chapter09_An_Introduction_to_Utility_Theory.pdf
+2. Start work on battle2
+3. https://www.tensorflow.org/js/demos
 
 # Javascript
 
