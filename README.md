@@ -58,10 +58,9 @@ $ npm run test:cov
 1. https://flappybird.io/
 2. Attempt to finish work on battle1
 
-
-<!--
-frameworks, tensor flow
-https://www.tensorflow.org/js/demos-->
+## Day 4
+1. Start work on battle2
+2. https://www.tensorflow.org/js/demos
 
 # Javascript
 
@@ -140,9 +139,17 @@ function myFunction(name) {
 }
 ```
 
-**// This function takes no parameters and returns a string value**
+**This function takes no parameters and returns a string value**
 ``` javascript
 function myFunction() {
-  return "my string return value
+  return "my string return value";
 }
+```
+
+**Assign a function to a variable, then call it**
+``` javascript
+let x = function() {
+  alert("I've been called!!!");
+}
+x();
 ```
