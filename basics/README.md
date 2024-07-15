@@ -132,6 +132,34 @@ console.log('this message will show up in the browsers console')
 alert('this message will show up in a alert box')
 ```
 
+## Functions
+
+**Functions are reusable pieces of code that can be called with input and return values**
+
+**This function takes one parameter and doesn't return any value**
+
+``` javascript
+function myFunction(name) {
+  alert("hello " + name )
+}
+```
+
+**This function takes no parameters and returns a string value**
+``` javascript
+function myFunction() {
+  return "my string return value";
+}
+```
+
+**Assign a function to a variable, then call it**
+``` javascript
+let x = function() {
+  alert("I've been called!!!");
+}
+x();
+```
+
+
 # Formatting
 Code formatting may not seem critical, but when you are reading a lot of code trying to make changes or debug, it will make a world of difference.  That said, everyone is expected to follow the next formatting rules.
 1. Indent code inside curly braces with one tab.
