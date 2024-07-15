@@ -1,5 +1,5 @@
 /*
-{
+gameState = {
     enemies: [
         {
             name: "name",

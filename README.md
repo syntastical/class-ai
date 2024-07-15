@@ -1,38 +1,4 @@
-## Description
-
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
-## Installation
-
-```bash
-$ npm install
-```
-
-## Running the app
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
+https://alf.nu/ReturnTrue?world=true&level=id
 
 # Schedule
 
@@ -65,67 +31,7 @@ $ npm run test:cov
 
 # Javascript
 
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
 
-# Data types
-
-## String
-``` javascript
-let x = 'I am a string'
-let x = "I am also a string"
-```
-
-## Number
-``` javascript
-let x = 1
-let x = 2.123
-```
-
-## Array
-``` javascript
-let x = [1, 2, 3, 4]
-let x = ['a', 'b', 'c', 'd']
-let x = [
-  [1, 2, 3, 4],
-  [5, 6, 7, 8]
-]
-```
-
-## Object
-``` javascript
-let x = {
-  name: "value",
-  name1: "value1",
-  pancake: [
-    "wonderful",
-    "tasty"
-  ],
-  myKey: {
-    name: "name"
-  }
-}
-```
-
-# Control blocks
-
-## If Statements
-
-``` javascript
-if(x == "hello") {
-  alert("the string x is equal to hello")
-} else {
-  alert("the string doesn't equal hello")
-}
-```
-
-## For Loops
-
-``` javascript
-let x = [1, 2, 3, 4]
-for(let y = 0; y < 4; y++) {
-  alert(x[y]) // 2
-}
-```
 
 
 ## Functions
