@@ -1,0 +1,30 @@
+.battle-field {
+    border: 3px solid black;
+    border-radius: 25px;
+    height: 75%;
+    width: 49%;
+    display: inline-block;
+    float: left;
+}
+
+.battle-field h1 {
+    text-align: center;
+}
+
+#battle-log {
+    border: 3px solid black;
+    border-radius: 25px;
+    clear: both;
+    width: 98%;
+    height: 24%;
+    overflow: scroll;
+    padding: 0px 5px;
+}
+
+.character {
+    text-align: center;
+}
+
+.character img {
+    height: 100px;
+}
